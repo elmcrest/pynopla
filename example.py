@@ -23,7 +23,7 @@ async def check_and_report_online_users(client_object, smtp):
         if user.connected:
             continue
         else:
-            message += f'User {user.name} ist offline ({strftime("%c",localtime())}).\n'
+            message += f'User {user.name} is offline ({strftime("%c",localtime())}).\n'
 
     await smtp.send_mail(SMTP_RECIPIENT, message)
 
