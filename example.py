@@ -11,7 +11,7 @@ SMTP_HOST = os.environ.get('SMTP_HOST')
 SMTP_USER = os.environ.get('SMTP_USER')
 SMTP_PASS = os.environ.get('SMTP_PASS')
 SMTP_RECIPIENT = os.environ.get('SMTP_RECIPIENT', SMTP_USER)
-PERIODIC_TIMEOUT = os.environ.get('PERIODIC_TIMEOUT', 900)
+PERIODIC_TIME = int(os.environ.get('PERIODIC_TIME', 900))
 
 
 async def check_and_report_online_users(client_object, smtp):
@@ -29,7 +29,7 @@ async def check_and_report_online_users(client_object, smtp):
 
 
 async def check_periodic(func, client_object, smpt):
-    p = Periodic(lambda: func(client_object, smpt), PERIODIC_TIMEOUT)
+    p = Periodic(lambda: func(client_object, smpt), PERIODIC_TIME)
     await p.start()
 
 
