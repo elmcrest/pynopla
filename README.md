@@ -2,7 +2,7 @@
 quick and dirty Inopla cloud pbx api thing
 
 #### Why Async?
-Well, just because of the fun of it. And to learn asyncio, too.
+Well, just because of the fun of it. And to learn asyncio, too. And it's energy efficient, and it's great and cool :)
 Another reason might be that it's handy to add arbitrary periodically events - or maybe act on external events from the
 Inopla api.
 
