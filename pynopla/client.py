@@ -60,4 +60,3 @@ class InoplaClient:
             devices = json.loads(await fetch(session, f'{self.api_url}/Devices'))
             for device in devices.get("response").get("data"):
                 self.devices[device.get('id')] = json_to_object(device, "Device")
-
