@@ -25,7 +25,8 @@ async def check_and_report_online_users(client_object, smtp):
         else:
             message += f'User {user.name} is offline ({strftime("%c",localtime())}).\n'
 
-    await smtp.send_mail(SMTP_RECIPIENT, message)
+    if message:
+        await smtp.send_mail(SMTP_RECIPIENT, message)
 
 
 async def check_periodic(func, client_object, smpt):
