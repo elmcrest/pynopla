@@ -22,15 +22,15 @@ you'll get notified by email.
 Most easy is to just start a Docker container (f.e. on your Synology or somewhere else)
 
 ```python
-docker run -e INOPLA_API_ID=your_id -e INOPLA_API_KEY="your_key" -e SMTP_HOST='your_smtp_host' -e SMTP_USER='your_smtp_user' -e SMTP_PASS='your_smtp_pass' -d elmcrest/pynopla
+docker run -e INOPLA_API_ID=your_id -e INOPLA_API_KEY=your_key -e SMTP_HOST=your_smtp_host -e SMTP_USER=your_smtp_user -e SMTP_PASS=your_smtp_pass elmcrest/pynopla
 ```
 *optional environment variables*
 
 ```python
--e SMTP_RECIPIENT="your_recipient"  # defaults to smtp_user
+-e SMTP_RECIPIENT=your_recipient  # defaults to smtp_user
 ```
 ```python
--e PERIODIC_TIME="your_time_in_seconds"  # defaults to 900 seconds (15 mins)
+-e PERIODIC_TIME=periodic_time_in_seconds  # defaults to 900 seconds (15 mins)
 ```
 
 Greetings,
