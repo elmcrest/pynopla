@@ -19,10 +19,18 @@ Also I'm happy if you think you can improve things, let me know, I'm open for ev
 The example provides a health check for your users (endpoints) connected to Inopla.de - once a user get disconnected,
 you'll get notified by email.
 Most easy is to just start a Docker container (f.e. on your Synology or somewhere else)
-`docker run -e INOPLA_API_ID=your_id -e INOPLA_API_KEY="your_key" -e SMTP_HOST='your_smtp_host' -e SMTP_USER='your_smtp_user' -e SMTP_PASS='your_smtp_pass' -d elmcrest/pynopla`
+
+```python
+docker run -e INOPLA_API_ID=your_id -e INOPLA_API_KEY="your_key" -e SMTP_HOST='your_smtp_host' -e SMTP_USER='your_smtp_user' -e SMTP_PASS='your_smtp_pass' -d elmcrest/pynopla
+```
 *optional environment variables*
+
+```python
 -e SMTP_RECIPIENT="your_recipient"  # defaults to smtp_user
+```
+```python
 -e PERIODIC_TIME="your_time_in_seconds"  # defaults to 900 seconds (15 mins)
+```
 
 Greetings,
 elmcrest
