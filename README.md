@@ -14,7 +14,6 @@ Also I'm happy if you think you can improve things, let me know, I'm open for ev
 #### ToDo
 - add tests (mocked)
 - add more features
-- investigate why the docker container is 706MB in size and improve
 
 #### Usage of the example
 The example provides a health check for your users (endpoints) connected to Inopla.de - once a user get disconnected,
